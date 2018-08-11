@@ -4,7 +4,7 @@ import scala.collection.JavaConverters._
 // println("this is a debug message")
 
 object Solution {
-  def solution(n: Int): Int = {
+    def solution(n: Int): Int = {
     // write your code in Scala 2.12
     val s=n.toBinaryString
     var gap=0
@@ -13,19 +13,20 @@ object Solution {
     for(i <- s.toString)
     { 
      if (i.asDigit==1 && gap < counter)
-       { gap=gap+counter
-       counter=0}
-     if (gap==counter)
-        counter=0 
+       { gap=counter     
+         counter=0
+       } 
+      if(i.asDigit==1)
+        counter=0
+       
      if (i.asDigit==0)
        counter=counter+1
-    //   println(i)
     } 
-  //  println(gap)
     if(gap==1 && counter!=0)
     0
      else gap
   }
+
 }
 
 
