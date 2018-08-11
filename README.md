@@ -1,6 +1,3 @@
-# codility
-binary
-
 import scala.collection.JavaConverters._
 
 // you can write to stdout for debugging purposes, e.g.
@@ -18,6 +15,8 @@ object Solution {
      if (i.asDigit==1 && gap < counter)
        { gap=gap+counter
        counter=0}
+     if (gap==counter)
+        counter=0 
      if (i.asDigit==0)
        counter=counter+1
     //   println(i)
